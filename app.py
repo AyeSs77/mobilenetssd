@@ -1,7 +1,7 @@
 import os
 from flask import Flask, request, redirect, url_for, render_template, send_from_directory, flash, jsonify
 from werkzeug.utils import secure_filename
-import cv2
+#import cv2
 import numpy as np
 import json
 import requests
@@ -166,7 +166,7 @@ def event_handle(event):
             json_line = json.dumps(json_line)
             decoded = json.loads(json_line)
             crl= pycurl.Curl()
-            crl.setopt( crl.URL, "https://bots.dialogflow.com/line/k--jomf/webhook")
+            crl.setopt( crl.URL, "https://bots.dialogflow.com/line/i--rcm9/webhook")
             crl.setopt( crl.POST, 1)
             crl.setopt( crl.BINARYTRANSFER, true)
             crl.setopt( crl.POSTFIELDS, decoded)
